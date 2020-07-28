@@ -1,0 +1,28 @@
+{
+  "name": "shotbot",
+  "version": "1.0.0",
+  "description": "Multi-tenant app for bots that post screenshots of web pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/shotbot.git"
+  },
+  "keywords": [],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/shotbot/issues"
+  },
+  "homepage": "https://github.com/jimkang/shotbot",
+  "devDependencies": {},
+  "dependencies": {
+    "@jimkang/post-it": "^1.1.2",
+    "call-next-tick": "^2.0.1",
+    "good-ia-source-image-probable-def": "^1.0.0",
+    "random-internet-archive": "^1.1.1",
+    "run-shotbot": "^3.0.5"
+  }
+}
