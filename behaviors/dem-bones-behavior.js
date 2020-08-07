@@ -24,15 +24,19 @@ module.exports = {
       url += `&minimumNumberOfBones=${multiplier * probable.rollDie(8)}`;
     }
 
-    wordnok.getRandomWords(
-      {
-        customParams: {
-          minCorpusCount: 1000,
-          limit: 1
-        }
-      },
-      oknok({ ok: runWanderStream, nok: postWithoutMessage })
-    );
+    if (probable.roll(3) === 0) {
+      wordnok.getRandomWords(
+        {
+          customParams: {
+            minCorpusCount: 1000,
+            limit: 1
+          }
+        },
+        oknok({ ok: runWanderStream, nok: postWithoutMessage })
+      );
+    } else {
+      post();
+    }
 
     function runWanderStream(words) {
       var word = words[0];
