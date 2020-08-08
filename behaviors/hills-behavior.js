@@ -27,9 +27,9 @@ module.exports = {
     screenshotOpts: {
       clip: {
         x: 96,
-        y: 25,
-        width: 800,
-        height: 450
+        y: 23,
+        width: 804,
+        height: 454
       }
     },
     viewportOpts: {
