@@ -20,3 +20,7 @@ run-hills-dry:
 
 prettier:
 	prettier --single-quote --write "**/*.js"
+
+install-fonts:
+	$(SSHCMD) "cd $(APPDIR) && sudo cp fonts/*.otf /usr/local/share/fonts && \
+	  fc-cache && fc-list"

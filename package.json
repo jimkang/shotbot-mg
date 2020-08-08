@@ -22,6 +22,9 @@
     "@jimkang/post-it": "^1.1.2",
     "call-next-tick": "^2.0.1",
     "good-ia-source-image-probable-def": "^1.0.0",
+    "improvise-on-slots": "^1.0.24",
+    "oknok": "^3.0.0",
+    "qs": "^6.9.4",
     "random-internet-archive": "^1.1.1",
     "run-shotbot": "^3.0.5",
     "wander-google-ngrams": "^2.5.2"
