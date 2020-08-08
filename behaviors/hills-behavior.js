@@ -3,13 +3,13 @@ var { Tablenest, d } = require('tablenest');
 
 var tablenest = Tablenest();
 
-var tweenLengthTable = tablenest({
+var tweenLengthTableRoll = tablenest({
   root: [[1, d`d1000+1000`], [4, d`d5000+2000`], [2, d`d23000+7000`]]
 });
 
 function generateImageURL(done) {
   const seed = new Date().toISOString();
-  const tweenLengthMS = tweenLengthTable.roll();
+  const tweenLengthMS = tweenLengthTableRoll();
   const url = `https://jimkang.com/hills/#tweenBetweenPairs=yes&tweenLengthMS=${tweenLengthMS}&seed=${seed}`;
   const caption = `<a href="${url}">High-def version</a>`;
 
