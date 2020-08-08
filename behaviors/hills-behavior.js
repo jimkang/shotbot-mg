@@ -52,7 +52,7 @@ module.exports = {
 </footer>`,
     maxEntriesPerPage: 20,
     generateRSS: true,
-    fileAbstractionType: 'LocalGit',
+    fileAbstractionType: 'LocalFile',
     archiveBaseURL: 'https://smidgeo.com/bots/hills',
     rssFeedOpts: {
       feed_url: 'https://smidgeo.com/bots/hills/rss/index.rss',
