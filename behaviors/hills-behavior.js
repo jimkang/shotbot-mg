@@ -46,7 +46,7 @@ module.exports = {
     title: 'Hills',
     idPrefix: 'hill',
     homeLink: 'https://smidgeo.com/bots/hills',
-    rootPath: '/usr/share/nginx/html/smidgeo.com/bots/hills',
+    rootPath: '/mnt/storage/archives/web-sites/smidgeo.com/bots/hills',
     footerHTML: `<footer>Want more hills? <a href="http://jimkang.com/hills">Go get you some.</a>
     <p><a href="https://smidgeo.com/bots/hills/rss/index.rss">Hills RSS</a></p>
 </footer>`,
