@@ -26,7 +26,7 @@
     "oknok": "^3.0.0",
     "qs": "^6.9.4",
     "random-internet-archive": "^1.1.1",
-    "run-shotbot": "^3.0.5",
+    "run-shotbot": "^4.0.0",
     "tablenest": "^4.0.0",
     "wander-google-ngrams": "^2.5.2"
   }
