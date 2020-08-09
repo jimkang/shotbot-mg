@@ -12,16 +12,42 @@ var createWanderStream = WanderGoogleNgrams({
 
 module.exports = {
   postingTargets: ['archive'],
-  generateImageURL(done) {
+  generate(done) {
+    const shouldAnimate = probable.roll(3) === 0;
     var seed = 'bot-' + new Date().toISOString();
     var url = 'http://jimkang.com/dem-bones/#hideControls=yes&seed=' + seed;
-    if (probable.roll(3) > 0) {
+
+    if (!shouldAnimate) {
       url += '&still=yes';
     }
+
     if (probable.roll(4) === 0) {
       const multiplier = probable.rollDie(20) + 2;
       url += `&numberOfSetsToUse=${multiplier}`;
       url += `&minimumNumberOfBones=${multiplier * probable.rollDie(8)}`;
+    }
+
+    var webimageOpts = {
+      screenshotOpts: {
+        clip: {
+          x: 0,
+          y: 0,
+          width: 640,
+          height: 640
+        }
+      },
+      viewportOpts: {
+        width: 640,
+        height: 640,
+        deviceScaleFactor: 1
+      }
+    };
+    if (shouldAnimate) {
+      Object.assign(webimageOpts, {
+        burstCount: 48,
+        timeBetweenBursts: 1000 / 12,
+        makeBurstsIntoAnimatedGif: true
+      });
     }
 
     if (probable.roll(3) === 0) {
@@ -101,26 +127,8 @@ module.exports = {
       }
 
       var caption = `<a href="${url}">Source</a> | ` + altText;
-      callNextTick(done, null, { url, altText, caption });
+      callNextTick(done, null, { url, altText, caption, webimageOpts });
     }
-  },
-  webimageOpts: {
-    screenshotOpts: {
-      clip: {
-        x: 0,
-        y: 0,
-        width: 640,
-        height: 640
-      }
-    },
-    viewportOpts: {
-      width: 640,
-      height: 640,
-      deviceScaleFactor: 1
-    },
-    burstCount: 48,
-    timeBetweenBursts: 1000 / 12,
-    makeBurstsIntoAnimatedGif: true
   },
   archive: {
     name: 'Dem Bones',
