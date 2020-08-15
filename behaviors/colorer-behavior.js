@@ -20,6 +20,11 @@ function generateImageURL(done) {
   );
 
   function assembleImageURL({ url, collection, title, detailsURL }) {
+    if (title.contains('Mount Wilson Observatory')) {
+      done(new Error('Mount Wilson image, not posting it.'));
+      return;
+    }
+
     const numberOfRuns = probable.roll(10) === 0 ? probable.rollDie(4) : 1;
     const baseColorerURL =
       'http://jimkang.com/colorer-web/#displaySrcImage=no&hideUi=yes&srcImgUrl=' +
