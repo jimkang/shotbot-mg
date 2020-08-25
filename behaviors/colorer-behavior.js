@@ -20,7 +20,7 @@ function generateImageURL(done) {
   );
 
   function assembleImageURL({ url, collection, title, detailsURL }) {
-    if (title.contains('Mount Wilson Observatory')) {
+    if (title.includes('Mount Wilson Observatory')) {
       done(new Error('Mount Wilson image, not posting it.'));
       return;
     }
