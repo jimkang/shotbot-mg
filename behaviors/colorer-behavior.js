@@ -71,8 +71,7 @@ function generateRun(kit) {
       kit.overlayOpacityMin +
       probable.roll(kit.overlayOpacityMax - kit.overlayOpacityMin),
     minimumValueDifference: kit.minimumValueDifference || 0.2,
-    numberOfRetriesToAvoidSingleColor:
-      kit.numberOfRetriesToAvoidSingleColor || 5
+    numberOfRetriesToAvoidSingleColor: 8 //kit.numberOfRetriesToAvoidSingleColor || 5
   };
 }
 
