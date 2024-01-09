@@ -27,7 +27,7 @@ function generateImageURL(done) {
 
     const numberOfRuns = probable.roll(10) === 0 ? probable.rollDie(4) : 1;
     const baseColorerURL =
-      'http://jimkang.com/colorer-web/#displaySrcImage=no&hideUi=yes&srcImgUrl=' +
+      'https://jimkang.com/colorer-web/#displaySrcImage=no&hideUi=yes&srcImgUrl=' +
       url;
     var runs = [];
 
@@ -96,7 +96,7 @@ module.exports = {
     rootPath: '/mnt/storage/archives/web-sites/smidgeo.com/bots/colorer',
     footerHTML: `<footer>
     <p>By <a href="https://smidgeo.com/notes/deathmtn">Jim Kang</a> and adorsk</p>
-    <p><a href="http://jimkang.com/colorer-web/">Do your own recoloring!</a></p>
+    <p><a href="https://jimkang.com/colorer-web/">Do your own recoloring!</a></p>
     <p><a href="https://smidgeo.com/bots/colorer/rss/index.rss">Get recolorings in your RSS feed.</a></p>
     <p><a href="https://smidgeo.com/bots/">More bots!</a></p>
 </footer>`,

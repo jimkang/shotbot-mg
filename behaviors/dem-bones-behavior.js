@@ -15,7 +15,7 @@ module.exports = {
   generate(done) {
     const shouldAnimate = probable.roll(3) === 0;
     var seed = 'bot-' + new Date().toISOString();
-    var url = 'http://jimkang.com/dem-bones/#hideControls=yes&seed=' + seed;
+    var url = 'https://jimkang.com/dem-bones/#hideControls=yes&seed=' + seed;
 
     if (!shouldAnimate) {
       url += '&still=yes';
@@ -138,7 +138,7 @@ module.exports = {
     rootPath: '/mnt/storage/archives/web-sites/smidgeo.com/bots/dem-bones',
     footerHTML: `<footer>
     <p>Dem bones dem bones dem &mdash; dry bones!</p>
-    <p><a href="http://jimkang.com/dem-bones/">Make your own bones!</a></p>
+    <p><a href="https://jimkang.com/dem-bones/">Make your own bones!</a></p>
     <p><a href="https://smidgeo.com/bots/dem-bones/rss/index.rss">Subscribe to Bone RSS!</a></p>
 </footer>`,
     maxEntriesPerPage: 20,
